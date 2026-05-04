@@ -1,0 +1,7 @@
+Test ID,Feature,Input / Data,Expected Result,Test Type
+TC-01,Permit Request Flow,"Registered user requests a Zone A semester permit; chosen zone has free capacity","Permit request is saved with status Pending Approval and a confirmation number is returned",System
+TC-02,Permit Verification,"Security officer scans a valid permit ID linked to a registered vehicle at an open gate","System shows VALID with owner name, plate, and expiry date within 2 seconds",System
+TC-03,Student Self-Service,"Student logs in and registers a new vehicle with valid plate, make, model, color","Vehicle appears under My Vehicles and student confirms the flow is intuitive",Acceptance
+TC-04,Security UAT,"Security officer verifies 10 different permits during a shift drill","All 10 results are displayed clearly within 2 seconds and officer signs off the workflow",Acceptance
+TC-05,Duplicate Plate Guard,"After login fix, register a vehicle with a plate that already exists","System rejects the registration with the same duplicate-plate error as before the fix",Regression
+TC-06,Permit Expiry Display,"After defect fix, verify a permit whose expiry date is in the future across time-zone boundaries","Permit shows VALID in every time-zone case (no longer wrongly EXPIRED)",Regression
